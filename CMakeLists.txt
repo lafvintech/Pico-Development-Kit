@@ -34,7 +34,7 @@ include_directories(./components/lvgl)
 add_definitions(-DLV_LVGL_H_INCLUDE_SIMPLE=1)
 file(GLOB_RECURSE DEMO_SOURCES ./components/lvgl/demos/*.c)
 
-add_executable(hello_world lv_port_disp.c lv_port_indev.c main.c img.c ${DEMO_SOURCES})
+add_executable(hello_world lv_port_disp.c lv_port_indev.c main.c img.c star.c ${DEMO_SOURCES})
 
 pico_generate_pio_header(hello_world ${CMAKE_CURRENT_LIST_DIR}/ws2812.pio OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/generated)
 

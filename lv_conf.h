@@ -119,6 +119,10 @@
      *Required to draw shadow, gradient, rounded corners, circles, arc, skew lines, image transformations or any masks*/
     #define LV_DRAW_SW_COMPLEX 1
 
+    
+    /*Disable ARM assembly optimizations for Cortex-M0+ compatibility*/
+    #define LV_DRAW_SW_ASM LV_DRAW_SW_ASM_NONE
+
     /* If a widget has `style_opa < 255` (not `bg_opa`, `text_opa` etc) or not NORMAL blend mode
      * it is buffered into a "simple" layer before rendering. The widget can be buffered in smaller chunks.
      * "Transformed layers" (if `transform_angle/zoom` are set) use larger buffers
